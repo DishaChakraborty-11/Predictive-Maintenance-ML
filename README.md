@@ -1,4 +1,4 @@
-Predictive Maintenance using Machine Learning
+⚙️ PREDICTIVE MAINTAINANCE USING ML
 
 A real-world ML project that predicts whether a machine is likely to fail soon using sensor data such as temperature, pressure, vibration, voltage, and runtime.
 
