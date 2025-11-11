@@ -1,0 +1,54 @@
+/* --- General Page Styling --- */
+body {
+    background-color: #f5f5f5;
+    font-family: "Segoe UI", sans-serif;
+    color: #333;
+}
+
+/* Center the entire app */
+.main {
+    padding: 20px;
+}
+
+/* Header title styling */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+/* Input box styling */
+input {
+    border-radius: 8px !important;
+}
+
+/* Button styling */
+.stButton>button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.stButton>button:hover {
+    background-color: #1a242f;
+}
+
+/* Success message */
+.st-success {
+    background-color: #d4f7dc;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Error message */
+.st-error {
+    background-color: #f6d6d6;
+    padding: 10px;
+    border-radius: 10px;
+}
