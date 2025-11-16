@@ -62,13 +62,13 @@ Predictive-Maintenance-ML/
 ## 📊 **Model Performance Visuals**
 
 ### 📈 Model Accuracy
-<img src="static/screenshots/accuracy_graph.png" width="400"/>
+<img src="static/accuracy_graph.png" width="400"/>
 
 ### 🔎 Confusion Matrix
-<img src="static/screenshots/confusion_matrix.png" width="500"/>
+<img src="static/confusion_matrix.png" width="500"/>
 
 ### 🌟 Feature Importance
-<img src="static/screenshots/feature_importance.png" width="650"/>
+<img src="static/feature_importance.png" width="650"/>
 
 ---
 
