@@ -1,161 +1,178 @@
-⚙️ PREDICTIVE MAINTAINANCE USING ML
+<div align="center">
 
-A real-world ML project that predicts whether a machine is likely to fail soon using sensor data such as temperature, pressure, vibration, voltage, and runtime.
+# 🛠️⚙️ Predictive Maintenance using Machine Learning  
+### **A Production-Ready ML Pipeline for Equipment Failure Prediction**
 
-This project demonstrates end-to-end ML development, including data preprocessing, feature engineering, model training, evaluation, and a working Streamlit web app for real-time predictions.
+<br>
 
-🚀 Project Overview
+<img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge&logo=github" />
+<img src="https://img.shields.io/badge/Machine%20Learning-RandomForest-blue?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Framework-ScikitLearn-orange?style=for-the-badge" />
+<img src="https://img.shields.io/badge/App-Streamlit-ff4b4b?style=for-the-badge&logo=streamlit" />
+<img src="https://img.shields.io/badge/Python-3.10-yellow?style=for-the-badge&logo=python" />
 
-Predictive Maintenance helps industries avoid unexpected equipment failures by analyzing sensor data and predicting when maintenance is required.
+<br><br>
 
-Industries using PdM:
-✅ Manufacturing
-✅ Railways
-✅ Heavy Machinery
-✅ Power Plants
-✅ Automobile & Aerospace
+✨ **AI-powered system that predicts machine failures using real sensor data.**  
+Automatically preprocesses data, trains a RandomForest model, evaluates performance,  
+and provides visual insights + an interactive prediction app.
 
-This ML model predicts:
+</div>
 
-1 → Machine failure likely
+---
 
-0 → Machine is running normally
+## 🚀 **Features**
+✔ End-to-End ML Pipeline (Preprocessing → Training → Evaluation → Export)  
+✔ Handles missing values & outliers  
+✔ One-Hot Encoding + Scaling with ColumnTransformer  
+✔ RandomForestClassifier with feature importance  
+✔ Exports trained model + preprocessor (joblib)  
+✔ Auto-generated model performance plots  
+✔ Ready-to-run Streamlit Web App
 
-✅ Tech Stack
+---
 
-Machine Learning
-
-Random Forest Classifier
-
-Feature Engineering
-
-StandardScaler
-
-Evaluation Metrics
-
-Python Libraries
-
-pandas, numpy
-
-scikit-learn
-
-seaborn, matplotlib
-
-joblib
-
-streamlit
-
-Others
-
-Streamlit (Frontend)
-
-Jupyter Notebook (Exploration)
-
-📁 Folder Structure
+## 📁 **Project Structure**
+ ```
 Predictive-Maintenance-ML/
 │
 ├── data/
 │   └── sensor_data.csv
 │
-├── notebooks/
-│   └── predictive_maintenance.ipynb
-│
 ├── model/
-│   ├── train_model.py
-│   ├── failure_model.pkl
-│   └── scaler.pkl
-│
-├── app/
-│   ├── app.py
-│   ├── styles.css
-│   └── helper.py
+│   ├── best_model.joblib
+│   ├── preprocessor.joblib
+│   └── train_model.py
 │
 ├── static/
 │   └── screenshots/
-│       ├── confusion_matrix.png
-│       ├── feature_importance.png
-│       └── accuracy_graph.png
+│         ├── accuracy_graph.png
+│         ├── confusion_matrix.png
+│         └── feature_importance.png
 │
-├── requirements.txt
-├── README.md
-└── .gitignore
+├── app/
+│   └── app.py
+│
+└── README.md
+```
 
-🔍 Model Training & Evaluation
 
-The ML pipeline includes:
+---
 
-✅ 1. Data Preprocessing
+## 📊 **Model Performance Visuals**
 
-Handling missing values
+### 📈 Model Accuracy
+<img src="static/screenshots/accuracy_graph.png" width="400"/>
 
-Scaling continuous features
+### 🔎 Confusion Matrix
+<img src="static/screenshots/confusion_matrix.png" width="500"/>
 
-Train-test split
+### 🌟 Feature Importance
+<img src="static/screenshots/feature_importance.png" width="650"/>
 
-✅ 2. Model
+---
 
-RandomForestClassifier (200 trees)
+## ⚙️ **How It Works (ML Pipeline)**
 
-Handles non-linear behavior
+### **1️⃣ Data Preprocessing**
+- Missing values filled  
+- Outlier handling  
+- Scaling numerical features  
+- One-hot encoding categorical features  
+- Automatic feature engineering (Temp Diff, etc.)
 
-Great for sensor-based predictions
+### **2️⃣ Model Training**
+- RandomForestClassifier  
+- Handles nonlinear relationships  
+- Extracts top predictive features  
 
-✅ 3. Evaluation Metrics
+### **3️⃣ Model Export**
+Outputs:
 
-Confusion Matrix
 
-Precision, Recall, F1
 
-Feature Importance
+best_model.joblib
+preprocessor.joblib
 
-📊 Results & Visualizations
-✅ Confusion Matrix
-<img src="static/screenshots/confusion_matrix.png" width="450">
-✅ Feature Importance
-<img src="static/screenshots/feature_importance.png" width="450">
 
-(Add more screenshots if you want!)
+### **4️⃣ Visual Insights**
+Automatically generated:
 
-🖥️ Streamlit Web App
+- Confusion Matrix  
+- Feature Importance  
+- Accuracy Plot  
 
-The project includes an interactive UI to test machine health.
+---
 
-✅ Features:
+## 📦 **Installation**
 
-Input sensor data manually
+```bash
+git clone https://github.com/yourusername/Predictive-Maintenance-ML.git
+cd Predictive-Maintenance-ML
+pip install -r requirements.txt
 
-Real-time ML prediction
+▶️ Run Training Script
+cd model
+python train_model.py
 
-Risk-based result display
-
-Works offline
-
-✅ To Run App:
+💻 Run the Streamlit App
 cd app
 streamlit run app.py
 
-🛠️ How to Run the Project Locally
-1️⃣ Clone Repo
-git clone <your-repo-link>
+📜 Training Logs (Expand to View)
+<details> <summary>Click to expand training output</summary>
+Dummy DataFrame created with sample missing values and outliers.
 
-2️⃣ Install Dependencies
-pip install -r requirements.txt
+--- Starting Data Preprocessing and Feature Engineering ---
+Filled missing values in 'Air temperature [K]' with mean (302.59)
+Filled missing values in 'Torque [Nm]' with mean (101.92)
+Data preprocessing complete.
 
-3️⃣ Train the Model (optional)
-python model/train_model.py
+--- Starting Model Training ---
+Training RandomForestClassifier...
+Model training complete.
 
-4️⃣ Run Web App
-streamlit run app/app.py
+Feature Importances:
+Temp_Diff               0.179
+Tool wear               0.153
+Process temperature     0.153
+Torque                  0.139
+Air temperature         0.134
+Rotational speed        0.134
+Type_L                  0.033
+Type_M                  0.028
+Target                  0.024
+Type_H                  0.017
 
-📈 Future Improvements
+--- Exporting Trained Model ---
+model saved to trained_model/best_model.joblib
+preprocessor saved to trained_model/preprocessor.joblib
 
-✅ Add real industrial IoT sensor data
-✅ Deploy using AWS / Azure / Streamlit Cloud
-✅ Add LSTM for time-series prediction
-✅ Add anomaly detection module
-✅ Connect to a live dashboard (Grafana / MQTT)
+</details>
+🧠 Tech Stack
 
-👩‍💻 Developed By
+Python
 
-Disha Chakraborty
-AI & Machine Learning Enthusiast
+Scikit-Learn
+
+Pandas
+
+NumPy
+
+Matplotlib / Seaborn
+
+Streamlit
+
+Joblib
+
+🌟 Future Improvements
+
+🔹 Deploy on cloud (Render / AWS / GCP)
+🔹 Hyperparameter tuning
+🔹 LSTM-based time-series forecasting
+🔹 Real-time sensor data ingestion
+
+<div align="center">
+❤️ Like this project? Star ⭐ the repo!
+Built with hard work & caffeine by Disha Chakraborty ☕✨
+</div> ```
