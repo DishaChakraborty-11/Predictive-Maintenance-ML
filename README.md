@@ -104,7 +104,45 @@ Automatically generated:
 
 ---
 
+
+## 📊 Dataset Preparation
+
+No external dataset is required to run this project.
+
+For demonstration purposes, the training script automatically generates a **dummy dataset** that simulates:
+- Sensor readings
+- Missing values
+- Outliers
+- Machine failure labels
+
+This allows users to:
+- Run the full pipeline out of the box
+- Understand preprocessing, feature engineering, and model training flow
+
+### Using a Custom Dataset (Optional)
+
+If you want to use your own dataset:
+1. Replace the dummy data generation logic in `train_model.py`
+2. Ensure your dataset includes relevant sensor features and a target label
+3. Update column names in the preprocessing step accordingly
+
+
 ## 📦 **Installation**
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Python 3.8 or higher  
+- pip (comes with Python)  
+- Git  
+
+Check versions:
+```bash
+python --version
+pip --version
+git --version
+
 
 ```bash
 git clone https://github.com/yourusername/Predictive-Maintenance-ML.git
@@ -115,9 +153,18 @@ pip install -r requirements.txt
 cd model
 python train_model.py
 
+This script:
+- Cleans the data
+- Trains a RandomForest model
+- Saves the trained model and preprocessor to `trained_model/`
+
+
 💻 Run the Streamlit App
 cd app
 streamlit run app.py
+
+This launches a web interface where you can interactively test predictions using the trained model.
+
 
 📜 Training Logs (Expand to View)
 <details> <summary>Click to expand training output</summary>
@@ -164,6 +211,17 @@ Matplotlib / Seaborn
 Streamlit
 
 Joblib
+
+## 📈 Interpreting the Output
+
+After training, you will see:
+
+- **Feature Importances**: Shows which sensor readings most influence failure prediction.
+- **Model saved to** `trained_model/best_model.joblib`
+- **Preprocessor saved to** `trained_model/preprocessor.joblib`
+
+Higher feature importance values indicate stronger influence on predictions.
+
 
 🌟 Future Improvements
 
