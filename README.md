@@ -102,77 +102,106 @@ Automatically generated:
 - Feature Importance  
 - Accuracy Plot  
 
+
+````
+##Setup Instructions
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/Predictive-Maintenance-ML.git
+````
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd Predictive-Maintenance-ML
+   ```
+
+3. Install the required dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
 ---
 
-## 📦 **Installation**
+## ▶️ Run the Training Script
 
-```bash
-git clone https://github.com/yourusername/Predictive-Maintenance-ML.git
-cd Predictive-Maintenance-ML
-pip install -r requirements.txt
+1. Move to the model directory:
 
-▶️ Run Training Script
-cd model
-python train_model.py
+   ```bash
+   cd model
+   ```
 
-💻 Run the Streamlit App
-cd app
-streamlit run app.py
+2. Execute the training script:
 
-📜 Training Logs (Expand to View)
-<details> <summary>Click to expand training output</summary>
-Dummy DataFrame created with sample missing values and outliers.
+   ```bash
+   python train_model.py
+   ```
 
---- Starting Data Preprocessing and Feature Engineering ---
-Filled missing values in 'Air temperature [K]' with mean (302.59)
-Filled missing values in 'Torque [Nm]' with mean (101.92)
-Data preprocessing complete.
+This step preprocesses the data, trains the machine learning model, and saves the trained model files.
 
---- Starting Model Training ---
-Training RandomForestClassifier...
-Model training complete.
+---
 
-Feature Importances:
-Temp_Diff               0.179
-Tool wear               0.153
-Process temperature     0.153
-Torque                  0.139
-Air temperature         0.134
-Rotational speed        0.134
-Type_L                  0.033
-Type_M                  0.028
-Target                  0.024
-Type_H                  0.017
+## 💻 Run the Streamlit Application
 
---- Exporting Trained Model ---
-model saved to trained_model/best_model.joblib
-preprocessor saved to trained_model/preprocessor.joblib
+1. Navigate to the app directory:
+
+   ```bash
+   cd app
+   ```
+
+2. Launch the Streamlit app:
+
+   ```bash
+   streamlit run app.py
+   ```
+
+3. Open the local URL displayed in the terminal to interact with the application.
+
+---
+
+## 📜 Training Output
+
+<details>
+<summary>Click to view sample output</summary>
+
+* Missing values are handled automatically
+* The model is trained using RandomForest
+* Feature importance and evaluation results are displayed
+* Trained model files are saved for reuse
 
 </details>
-🧠 Tech Stack
 
-Python
+---
 
-Scikit-Learn
+## 🧠 Technology Stack
 
-Pandas
+* Python
+* Scikit-learn
+* Pandas
+* NumPy
+* Matplotlib
+* Streamlit
 
-NumPy
+---
 
-Matplotlib / Seaborn
+## 🌟 Future Improvements
 
-Streamlit
+* Cloud deployment (AWS / GCP / Render)
+* Model optimization and hyperparameter tuning
+* Time-series forecasting
+* Real-time data integration
 
-Joblib
-
-🌟 Future Improvements
-
-🔹 Deploy on cloud (Render / AWS / GCP)
-🔹 Hyperparameter tuning
-🔹 LSTM-based time-series forecasting
-🔹 Real-time sensor data ingestion
+---
 
 <div align="center">
-❤️ Like this project? Star ⭐ the repo!
-Built with hard work & caffeine by Disha Chakraborty ☕✨
-</div> ```
+⭐ If you find this project useful, consider starring the repository  
+Developed by Disha Chakraborty
+</div>
+```
+
+
+
