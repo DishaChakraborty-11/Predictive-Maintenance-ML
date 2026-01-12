@@ -7,6 +7,7 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report
 
 # --- 1. Data Loading (with dummy data creation if CSV not found) ---
 try:
@@ -127,6 +128,30 @@ print("Model training complete.")
 
 # Assign to best_model for consistency if this were part of a larger notebook
 best_model = predictive_maintenance_pipeline
+
+# --- 5. Model Evaluation ---
+print("\n--- Evaluating Model on Test Data ---")
+
+# Predict on test set
+y_pred = predictive_maintenance_pipeline.predict(X_test_data)
+
+# Accuracy
+accuracy = accuracy_score(y_test_target, y_pred)
+print(f"Accuracy: {accuracy:.4f}")
+
+# Precision, Recall, F1-score
+precision = precision_score(y_test_target, y_pred, average='weighted')
+recall = recall_score(y_test_target, y_pred, average='weighted')
+f1 = f1_score(y_test_target, y_pred, average='weighted')
+
+print(f"Precision: {precision:.4f}")
+print(f"Recall: {recall:.4f}")
+print(f"F1 Score: {f1:.4f}")
+
+# Full classification report
+print("\nClassification Report:")
+print(classification_report(y_test_target, y_pred))
+
 
 # Get and print feature importances (optional, but good for understanding)
 if hasattr(best_model.named_steps['classifier'], 'feature_importances_'):
